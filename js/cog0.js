@@ -5,7 +5,7 @@ const tickButton = document.getElementById('tickButton');
 const tickCounter = document.getElementById('tickCounter');
 
 // Set canvas background to black
-canvas.style.backgroundColor = 'black';
+canvas.style.backgroundColor = 'green';
 let tickCount = 0;
 
 // Define constants and an array to hold Points of Interest (POIs)
