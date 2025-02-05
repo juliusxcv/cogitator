@@ -3,55 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOOM TROOPER Character Creator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, select {
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Character Creator</title>
 </head>
 <body>
-    <h1>DOOM TROOPER Character Creator</h1>
     <form id="characterForm">
-        <h2>Distribute 4 points among:</h2>
-        <label for="ballistics">Ballistics Proficiency:</label>
+        <label for="ballistics">Ballistics:</label>
         <input type="number" id="ballistics" name="ballistics" min="-1" max="5" value="0"><br>
-        
-        <label for="closeCombat">Close Combat Proficiency:</label>
+        <label for="closeCombat">Close Combat:</label>
         <input type="number" id="closeCombat" name="closeCombat" min="-1" max="5" value="0"><br>
-        
         <label for="fortitude">Fortitude:</label>
-        <input type="number" id="fortitude" name="fortitude" min="-1" max="6" value="0"><br>
-        
+        <input type="number" id="fortitude" name="fortitude" min="-1" max="5" value="0"><br>
         <label for="swiftness">Swiftness:</label>
         <input type="number" id="swiftness" name="swiftness" min="-1" max="5" value="0"><br>
-
         <h2>Distribute 5 points among:</h2>
         <label for="insight">Insight:</label>
         <input type="number" id="insight" name="insight" min="-2" max="3" value="0"><br>
-
         <label for="presence">Presence:</label>
         <input type="number" id="presence" name="presence" min="-2" max="3" value="0"><br>
-
         <label for="resolve">Resolve:</label>
         <input type="number" id="resolve" name="resolve" min="-2" max="5" value="0"><br>
-
         <label for="faith">Faith:</label>
         <input type="number" id="faith" name="faith" min="-2" max="5" value="0"><br>
-
         <label for="techLore">Tech Lore:</label>
         <input type="number" id="techLore" name="techLore" min="-2" max="5" value="0"><br>
-
         <label for="witchSight">Witch Sight:</label>
         <input type="number" id="witchSight" name="witchSight" min="-2" max="5" value="0"><br>
-
         <h2>Choose a Class:</h2>
         <select id="class" name="class">
             <option value="veteran">Veteran</option>
@@ -60,13 +36,10 @@
             <option value="psyker">Psyker</option>
             <option value="skitarius">Skitarius</option>
         </select><br>
-
         <button type="button" onclick="createCharacter()">Create Character</button>
     </form>
-
     <h2>Character Details</h2>
     <p id="characterDetails"></p>
-
     <script src="characterCreator.js"></script>
 </body>
 </html>
