@@ -52,11 +52,11 @@ function createCharacter() {
     // Add class bonuses here
     // Example for Veteran class
     if (classType === 'veteran') {
-        ballistics += 1;
-        closeCombat += 1;
-        presence += 2;
-        resolve += 1;
-        witchSight -= 1;
+        ballistics += 0;
+        closeCombat += 0;
+        presence += 0;
+        resolve += 0;
+        witchSight -= 0;
     }
 
     // Add other class bonuses...
