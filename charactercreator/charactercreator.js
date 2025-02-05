@@ -1,3 +1,4 @@
+console.log("characterCreator.js loaded");
 function createCharacter() {
     const ballistics = parseInt(document.getElementById('ballistics').value);
     const closeCombat = parseInt(document.getElementById('closeCombat').value);
