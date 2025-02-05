@@ -1,15 +1,14 @@
-console.log("characterCreator.js loaded");
 function createCharacter() {
-    const ballistics = parseInt(document.getElementById('ballistics').value);
-    const closeCombat = parseInt(document.getElementById('closeCombat').value);
-    const fortitude = parseInt(document.getElementById('fortitude').value);
-    const swiftness = parseInt(document.getElementById('swiftness').value);
-    const insight = parseInt(document.getElementById('insight').value);
-    const presence = parseInt(document.getElementById('presence').value);
-    const resolve = parseInt(document.getElementById('resolve').value);
-    const faith = parseInt(document.getElementById('faith').value);
-    const techLore = parseInt(document.getElementById('techLore').value);
-    const witchSight = parseInt(document.getElementById('witchSight').value);
+    let ballistics = parseInt(document.getElementById('ballistics').value);
+    let closeCombat = parseInt(document.getElementById('closeCombat').value);
+    let fortitude = parseInt(document.getElementById('fortitude').value);
+    let swiftness = parseInt(document.getElementById('swiftness').value);
+    let insight = parseInt(document.getElementById('insight').value);
+    let presence = parseInt(document.getElementById('presence').value);
+    let resolve = parseInt(document.getElementById('resolve').value);
+    let faith = parseInt(document.getElementById('faith').value);
+    let techLore = parseInt(document.getElementById('techLore').value);
+    let witchSight = parseInt(document.getElementById('witchSight').value);
     const classType = document.getElementById('class').value;
 
     // Add class bonuses here
