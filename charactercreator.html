@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOOM TROOPER Character Creator</title>
+    <title>DOOM TROOPER Character Cogitator</title>
+    <link rel="stylesheet" href="styles.css">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
     <style>
         body {
@@ -16,6 +17,12 @@
         input, select {
             margin-bottom: 10px;
         }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -23,35 +30,112 @@
     <form id="characterForm">
         <h2>Distribute 4 points among:</h2>
         <label for="ballistics">Ballistics Proficiency:</label>
-        <input type="number" id="ballistics" name="ballistics" min="-1" max="5" value="0"><br>
+        <div id="ballistics">
+            <input type="checkbox" name="ballistics" value="-1" class="negative"> -1
+            <input type="checkbox" name="ballistics" value="1" class="positive">
+            <input type="checkbox" name="ballistics" value="1" class="positive">
+            <input type="checkbox" name="ballistics" value="1" class="positive">
+            <input type="checkbox" name="ballistics" value="1" class="positive">
+            <input type="checkbox" name="ballistics" value="1" class="positive">
+        </div>
         
         <label for="closeCombat">Close Combat Proficiency:</label>
-        <input type="number" id="closeCombat" name="closeCombat" min="-1" max="5" value="0"><br>
+        <div id="closeCombat">
+            <input type="checkbox" name="closeCombat" value="-1" class="negative"> -1
+            <input type="checkbox" name="closeCombat" value="1" class="positive">
+            <input type="checkbox" name="closeCombat" value="2" class="positive">
+            <input type="checkbox" name="closeCombat" value="3" class="positive">
+            <input type="checkbox" name="closeCombat" value="4" class="positive">
+            <input type="checkbox" name="closeCombat" value="5" class="positive">
+        </div>
         
         <label for="fortitude">Fortitude:</label>
-        <input type="number" id="fortitude" name="fortitude" min="-1" max="6" value="0"><br>
+        <div id="fortitude">
+            <input type="checkbox" name="fortitude" value="-1" class="negative"> -1
+            <input type="checkbox" name="fortitude" value="1" class="positive">
+            <input type="checkbox" name="fortitude" value="2" class="positive">
+            <input type="checkbox" name="fortitude" value="3" class="positive">
+            <input type="checkbox" name="fortitude" value="4" class="positive">
+            <input type="checkbox" name="fortitude" value="5" class="positive">
+            <input type="checkbox" name="fortitude" value="6" class="positive">
+        </div>
         
         <label for="swiftness">Swiftness:</label>
-        <input type="number" id="swiftness" name="swiftness" min="-1" max="5" value="0"><br>
+        <div id="swiftness">
+            <input type="checkbox" name="swiftness" value="-1" class="negative"> -1
+            <input type="checkbox" name="swiftness" value="1" class="positive">
+            <input type="checkbox" name="swiftness" value="2" class="positive">
+            <input type="checkbox" name="swiftness" value="3" class="positive">
+            <input type="checkbox" name="swiftness" value="4" class="positive">
+            <input type="checkbox" name="swiftness" value="5" class="positive">
+        </div>
+
+        <p>Remaining Points for Category 1: <span id="remainingPointsCategory1">4</span></p>
 
         <h2>Distribute 5 points among:</h2>
         <label for="insight">Insight:</label>
-        <input type="number" id="insight" name="insight" min="-2" max="3" value="0"><br>
+        <div id="insight">
+            <input type="checkbox" name="insight" value="-2" class="negative"> -2
+            <input type="checkbox" name="insight" value="-1" class="negative"> -1
+            <input type="checkbox" name="insight" value="1" class="positive">
+            <input type="checkbox" name="insight" value="2" class="positive">
+            <input type="checkbox" name="insight" value="3" class="positive">
+        </div>
 
         <label for="presence">Presence:</label>
-        <input type="number" id="presence" name="presence" min="-2" max="3" value="0"><br>
+        <div id="presence">
+            <input type="checkbox" name="presence" value="-2" class="negative"> -2
+            <input type="checkbox" name="presence" value="-1" class="negative"> -1
+            <input type="checkbox" name="presence" value="1" class="positive">
+            <input type="checkbox" name="presence" value="2" class="positive">
+            <input type="checkbox" name="presence" value="3" class="positive">
+        </div>
 
         <label for="resolve">Resolve:</label>
-        <input type="number" id="resolve" name="resolve" min="-2" max="5" value="0"><br>
+        <div id="resolve">
+            <input type="checkbox" name="resolve" value="-2" class="negative"> -2
+            <input type="checkbox" name="resolve" value="-1" class="negative"> -1
+            <input type="checkbox" name="resolve" value="1" class="positive">
+            <input type="checkbox" name="resolve" value="2" class="positive">
+            <input type="checkbox" name="resolve" value="3" class="positive">
+            <input type="checkbox" name="resolve" value="4" class="positive">
+            <input type="checkbox" name="resolve" value="5" class="positive">
+        </div>
 
         <label for="faith">Faith:</label>
-        <input type="number" id="faith" name="faith" min="-2" max="5" value="0"><br>
+        <div id="faith">
+            <input type="checkbox" name="faith" value="-2" class="negative"> -2
+            <input type="checkbox" name="faith" value="-1" class="negative"> -1
+            <input type="checkbox" name="faith" value="1" class="positive">
+            <input type="checkbox" name="faith" value="2" class="positive">
+            <input type="checkbox" name="faith" value="3" class="positive">
+            <input type="checkbox" name="faith" value="4" class="positive">
+            <input type="checkbox" name="faith" value="5" class="positive">
+        </div>
 
         <label for="techLore">Tech Lore:</label>
-        <input type="number" id="techLore" name="techLore" min="-2" max="5" value="0"><br>
+        <div id="techLore">
+            <input type="checkbox" name="techLore" value="-2" class="negative"> -2
+            <input type="checkbox" name="techLore" value="-1" class="negative"> -1
+            <input type="checkbox" name="techLore" value="1" class="positive">
+            <input type="checkbox" name="techLore" value="2" class="positive">
+            <input type="checkbox" name="techLore" value="3" class="positive">
+            <input type="checkbox" name="techLore" value="4" class="positive">
+            <input type="checkbox" name="techLore" value="5" class="positive">
+        </div>
 
         <label for="witchSight">Witch Sight:</label>
-        <input type="number" id="witchSight" name="witchSight" min="-2" max="5" value="0"><br>
+        <div id="witchSight">
+            <input type="checkbox" name="witchSight" value="-2" class="negative"> -2
+            <input type="checkbox" name="witchSight" value="-1" class="negative"> -1
+            <input type="checkbox" name="witchSight" value="1" class="positive">
+            <input type="checkbox" name="witchSight" value="2" class="positive">
+            <input type="checkbox" name="witchSight" value="3" class="positive">
+            <input type="checkbox" name="witchSight" value="4" class="positive">
+            <input type="checkbox" name="witchSight" value="5" class="positive">
+        </div>
+
+        <p>Remaining Points for Category 2: <span id="remainingPointsCategory2">5</span></p>
 
         <h2>Choose a Class:</h2>
         <select id="class" name="class">
@@ -68,6 +152,6 @@
     <h2>Character Details</h2>
     <p id="characterDetails"></p>
 
-    <script src="../js/charactercreator.js"></script>
+    <script src="js/charactercreator.js"></script>
 </body>
 </html>
